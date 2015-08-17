@@ -1,0 +1,18 @@
+{
+  "name": "youtube-pane",
+  "main": "./lib/youtube-pane",
+  "version": "0.0.0",
+  "description": "Youtube pane embedded into atom editor.",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "youtube-pane:toggle"
+  },
+  "repository": "https://github.com/atom/youtube-pane",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

@@ -1,5 +1,11 @@
-# youtube-pane package
+# Youtube Pane Package for Atom
 
-A short description of your package.
+With this package you can watch YouTube Videos or Play Music easily right into Atom editor.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+## Ctrl + Shift + Y to show/hide the YouTube Pane
+
+<br />
+
+## Ctrl + Shift + L to enlarge/shorten the pane
+
+![A screenshot of YouTube Pane Package](https://raw.githubusercontent.com/alexandruionascu/youtube-pane/master/youtube_pane.png)

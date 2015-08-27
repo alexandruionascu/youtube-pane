@@ -1,7 +1,7 @@
 {
   "name": "youtube-pane",
   "main": "./lib/youtube-pane",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Youtube pane embedded into atom editor. Watch videos or play music from YouTube.",
   "keywords": [],
   "activationCommands": {

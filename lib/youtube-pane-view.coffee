@@ -3,8 +3,7 @@
 module.exports =
 class YoutubePaneView extends View
   @content: ->
-    @div class:'styleguide padded pane-item native-key-bindings' , =>
-      @div class: 'youtube'
+    @div class: 'youtube native-key-bindings'
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->

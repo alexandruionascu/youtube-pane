@@ -22,18 +22,12 @@ module.exports = YoutubePane =
     @subscriptions.add atom.commands.add 'atom-workspace', 'youtube-pane:enlarge': => @enlarge()
 
     $(document).ready ->
-      height = $(window).height()
-      console.log height
       width = $(window).width()
       $('.youtube').width(width / 3)
-      $('.youtube').append('<webview id="youtube-pane" src="https:/m.youtube.com/" style="display:inline-block; float: right; width:' + width / 3 +'px; height:' + height + 'px;"></webview>')
+      $('.youtube').append('<webview id="youtube-pane" src="https:/m.youtube.com/" style="position:absolute; top:0; left:0; right:0; bottom:0;"></webview>')
       $(window).on 'resize' , ->
-        height = $(window).height()
         width = $(window).width()
         $('.youtube').width(width / 3)
-        $('.youtube').height(height)
-        $('#youtube-pane').width(width / 3)
-        $('#youtube-pane').height(height)
 
 
 
@@ -55,10 +49,8 @@ module.exports = YoutubePane =
 
   enlarge: ->
     if @enlarged == false
-      $('#youtube-pane').width($(window).width() / 2)
       $('.youtube').width($(window).width() / 2)
       @enlarged = true
     else
-      $('#youtube-pane').width($(window).width() / 3)
       $('.youtube').width($(window).width() / 3)
       @enlarged = false

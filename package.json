@@ -1,0 +1,66 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-1161112-4352-1ytg8j8/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-1161112-4352-1ytg8j8/package.tgz",
+        "spec": "/tmp/d-1161112-4352-1ytg8j8/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-1161112-4352-1o7pwa5"
+    ]
+  ],
+  "_from": "../d-1161112-4352-1ytg8j8/package.tgz",
+  "_id": "youtube-pane@1.5.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/youtube-pane",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-1161112-4352-1ytg8j8/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-1161112-4352-1ytg8j8/package.tgz",
+    "spec": "/tmp/d-1161112-4352-1ytg8j8/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-1161112-4352-1ytg8j8/package.tgz",
+  "_shasum": "3d3f1b40ff56e6413db9e25ab42e16398eb50267",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-1161112-4352-1ytg8j8/package.tgz",
+  "_where": "/tmp/apm-install-dir-1161112-4352-1o7pwa5",
+  "activationCommands": {
+    "atom-workspace": "youtube-pane:toggle"
+  },
+  "bugs": {
+    "url": "https://github.com/alexandruionascu/youtube-pane/issues"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "2.1.0"
+  },
+  "description": "Youtube pane embedded into atom editor. Watch videos or play music from YouTube.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/alexandruionascu/youtube-pane#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "./lib/youtube-pane",
+  "name": "youtube-pane",
+  "optionalDependencies": {},
+  "readme": "# Youtube Pane Package for Atom\n\nWith this package you can watch YouTube Videos or Play Music easily right into Atom editor.\n\n### Ctrl + Alt + Y to show/hide the YouTube Pane\n\n### Ctrl + Alt + L to enlarge/shorten the pane\n\n![A screenshot of YouTube Pane Package](https://raw.githubusercontent.com/alexandruionascu/youtube-pane/master/youtube_pane.png)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandruionascu/youtube-pane.git"
+  },
+  "version": "1.5.0"
+}

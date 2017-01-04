@@ -5,6 +5,7 @@ YoutubePaneView = require './youtube-pane-view'
 
 module.exports = YoutubePane =
   youtubePaneView: null
+  webview: null
   modalPanel: null
   subscriptions: null
   enlarged : false
@@ -22,13 +23,13 @@ module.exports = YoutubePane =
     @subscriptions.add atom.commands.add 'atom-workspace', 'youtube-pane:enlarge': => @enlarge()
 
     #Create the Youtube Webview
-    webview = document.createElement("webview");
-    webview.setAttribute("src", "http://www.youtube.com/")
-    webview.setAttribute("id", "youtube-pane")
+    @webview = document.createElement("webview");
+    @webview.setAttribute("src", "http://www.youtube.com/")
+    @webview.setAttribute("id", "youtube-pane")
 
     #Append it to the right panel
     @youtubePane = document.getElementsByClassName("youtube")[0]
-    @youtubePane.appendChild(webview)
+    @youtubePane.appendChild(@webview)
 
   deactivate: ->
     @modalPanel.destroy()
@@ -50,10 +51,12 @@ module.exports = YoutubePane =
     console.log(@youtubePane)
 
     if @enlarged == false
+      @webview.setAttribute("style", "width: 1000px")
       #@youtubePane.setAttribute('width', width * 2)
       #@youtubePane.setAttribute('height', height * 2)
       @enlarged = true
     else
+      @webview.setAttribute("style", "width: 500px")
       #@youtubePane.setAttribute('width', width / 2)
       #@youtubePane.setAttribute('height', height / 2)
       @enlarged = false

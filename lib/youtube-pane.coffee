@@ -1,5 +1,5 @@
 YoutubePaneView = require './youtube-pane-view'
-
+YoutubePanelView = require './youtube-panel-view'
 
 {CompositeDisposable} = require 'atom'
 
@@ -10,6 +10,7 @@ module.exports = YoutubePane =
   subscriptions: null
   enlarged : false
   youtubePane: null
+  youtubePanel: null
 
   activate: (state) ->
     @youtubePaneView = new YoutubePaneView(state.youtubePaneViewState)
@@ -31,6 +32,14 @@ module.exports = YoutubePane =
     @youtubePane = document.getElementsByClassName("youtube")[0]
     @youtubePane.appendChild(@webview)
 
+    #BottomPanel
+    @youtubePanel = new YoutubePanelView()
+    atom.workspace.addBottomPanel(item: @youtubePanel.getElement())
+    #Update the panel content every 5 seconds
+    setInterval =>
+      @updatePanel()
+    , 5000
+
   deactivate: ->
     @modalPanel.destroy()
     @subscriptions.dispose()
@@ -38,6 +47,9 @@ module.exports = YoutubePane =
 
   serialize: ->
     youtubePaneViewState: @youtubePaneView.serialize()
+
+  updatePanel: ->
+    @youtubePanel.updatePanel @webview.getTitle()
 
   toggle: ->
     console.log 'YoutubePane was toggled!'
